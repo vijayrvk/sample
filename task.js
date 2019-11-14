@@ -10,33 +10,6 @@ var finalArr = [...new Set(dupArr)];
 
 console.log(finalArr)
 
-var result;
-var start;
-function rescursive(a, b) {
-	if((b-a) == 1) {
-		if(!result) {
-			result = a + '-' + b;
-		} else {
-			result = result.replace(a,b)			
-		}
-	} else {
-		if(!result) {
-			result = a;
-		} else {
-			if(b){
-				result = result + ',' + b;
-			}
-		}
-		
-	}
-}
-for (var i = 0; i < finalArr.length; i++) {
-	rescursive(finalArr[i], finalArr[i+1])
-}
-
-
-
-
 var result2 = [];
 var lindex = 0, rindex = 1;
 var newArr = [];
